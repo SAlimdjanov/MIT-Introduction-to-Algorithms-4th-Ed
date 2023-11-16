@@ -1,6 +1,6 @@
 # Insertion Sort
 
-**Sorting Problem:** you neeed to sort a sequence of numbers into monotonically increasing order. **Insertion Sort** solves this problem.
+**Sorting Problem:** You neeed to sort a sequence of numbers into monotonically increasing order. **Insertion Sort** solves this problem.
 
 ---
 
@@ -28,7 +28,7 @@ At all times, the blocks held in your left hand hare sorted, and these blocks we
 #### Pseudocode
 
 ```python
-INSERTION-SORT(A, n)
+INSERTION_SORT(A, n)
     for i = 2 to n
         key = A[i]
         # Insert A[i] into the sorted subarray A[1:i - 1]

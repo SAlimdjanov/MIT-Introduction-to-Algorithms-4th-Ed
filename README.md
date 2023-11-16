@@ -9,3 +9,5 @@ This repository contains notes, code, and practice problems from _Introduction t
 ### 1 - Introduction
 
 1. Insertion Sort
+2. Analyzing Algorithms
+3. Designing Algorithms

@@ -16,7 +16,7 @@ This algorithm follows the Divide and Conquer method; it sorts a subarray $A[p:r
 
 The recursion "caps out" when it reaches the base case: $\text{length}\left(A[p:r]\right)=1$, when $p=r$. As noted in `INSERTION_SORT`'s loop invariant, a subarray comprising of a single element is always sorted.
 
-The key operation in Merge Sort occurs in the combine step, which merges two adjacent, sorted subarrays. The merge operation is performed by the auxiliary procedure `MERGE(A, p, q, r)`, where the indices of the array follow $p<=q<r$. The procedure assumes that the adjacent subarrays $A[p:q]$ and $A[q+1:r]$ were already recursively sorted.
+The key operation in Merge Sort occurs in the combine step, which merges two adjacent, sorted subarrays. The merge operation is performed by the auxiliary procedure `MERGE(A, p, q, r)`, where the indices of the array follow $p <= q < r$. The procedure assumes that the adjacent subarrays $A[p:q]$ and $A[q+1:r]$ were already recursively sorted.
 
 Each basic step of the sort takes constant time and the total number of basic steps being between $n/2$ and $n$, we can say that merging takes $\Theta(n)$ time. The Merge procedure pseudocode is below:
 
@@ -66,7 +66,7 @@ MERGE(A, p, q, r)
         k = k + 1
 ```
 
-The procedure `MERGE_SORT(A, p, r)` sorts the elements in the subarray $A[q + 1:r]$. If $p=r$, the subarray has just one element and is therefore already sorted. Otherwise, we must have $p<r$ and `MERGE_SORT` runs the divide, conquer, and combine steps:
+The procedure `MERGE_SORT(A, p, r)` sorts the elements in the subarray $A[q + 1:r]$. If $p=r$, the subarray has just one element and is therefore already sorted. Otherwise, we must have $p < r$ and `MERGE_SORT` runs the divide, conquer, and combine steps:
 
 ```python
 MERGE_SORT(A, p, r)

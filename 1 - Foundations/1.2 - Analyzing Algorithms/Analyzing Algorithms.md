@@ -32,15 +32,15 @@ For each $i = 2, 3, ..., n$, let $t_i$ denote the number of times the `while` lo
 
 The running time of the algorithm is the sum of the running times for each statement executed. A statement that takes $c_k$ steps to execute and executes $m$ times contributes $c_km$ to the total running time. $T(n)$ denotes the running time of an algorithm on an input of size $n$. To compute $T(n)$, calculate the sum of the products of the costs and times:
 
-| Line | `INSERTION_SORT(A,N)`        | Cost  | Time                       |
-| ---- | ---------------------------- | ----- | -------------------------- |
-| 1    | `for i = 2 to n`             | $c_1$ | $n$                        |
-| 2    | `key = A[i]`                 | $c_2$ | $n-1$                      |
-| 4    | `j = i - 1`                  | $c_4$ | $n - 1$                    |
-| 5    | `while j > 0 and A[j] > key` | $c_5$ | $\sum_{i=2}^{n} t_i$       |
-| 6    | `A[j + 1] = A[j]`            | $c_6$ | $\sum_{i=2}^{n} (t_i - 1)$ |
-| 7    | `j = j - 1`                  | $c_7$ | $\sum_{i=2}^{n} (t_i - 1)$ |
-| 8    | `A[j + 1] = key`             | $c_8$ | $n - 1$                    |
+| Line | `INSERTION_SORT(A,N)`        | Cost  | Time                            |
+| ---- | ---------------------------- | ----- | --------------------------------|
+| 1    | `for i = 2 to n`             | $c_1$ | $n$                             |
+| 2    | `key = A[i]`                 | $c_2$ | $n-1$                           |
+| 4    | `j = i - 1`                  | $c_4$ | $n - 1$                         |
+| 5    | `while j > 0 and A[j] > key` | $c_5$ | $\sum\limits_{i=2}^n t_i$       |
+| 6    | `A[j + 1] = A[j]`            | $c_6$ | $\sum\limits_{i=2}^n (t_i - 1)$ |
+| 7    | `j = j - 1`                  | $c_7$ | $\sum\limits_{i=2}^n (t_i - 1)$ |
+| 8    | `A[j + 1] = key`             | $c_8$ | $n - 1$                         |
 
 **Note:** Line 3 is omitted as it is a comment.
 
@@ -58,14 +58,14 @@ The best-case running time is thus linear. The worst case arises when the input 
 
 $$
 \begin{align*}
-\sum^{n}_{i=2}{i} &= \left(\sum^{n}_{i=1}{i}\right) - 1 \\
+\sum\limits_{i=2}^n{i} &= \left(\sum\limits_{i=1}^{n}{i}\right) - 1 \\
 &= \frac{n(n+1)}{2} - 1 \\
 \end{align*}
 $$
 
 $$
 \begin{align*}
-\sum^{n}_{i=2}{(i - 1)} &= \left(\sum^{n - 1}_{i=1}{i}\right) - 1 \\
+\sum\limits_{i=2}^{n}{(i - 1)} &= \left(\sum\limits_{i=1}^{n - 1}{i}\right) - 1 \\
 &= \frac{n(n+1)}{2} \\
 \end{align*}
 $$
@@ -86,6 +86,4 @@ By inspection, one can see that the worst-case $T(n)$ is quadratic. We usually c
 
 #### Order of Growth
 
-Also known as the **Rate of Growth**, is the leading term of a computed $T(n)$, since the lower order terms are neglible.
-
-To highlight the order of growth of the running time, we utilize $\Theta$ notation. For the previous example, we write that the algorithm is $\Theta(n^2)$
+Also known as the **Rate of Growth**, is the leading term of a computed $T(n)$, since the lower order terms are neglible. To highlight the order of growth of the running time, we utilize $\Theta$ notation. For the previous example, we write that the algorithm has $\Theta(n^2)$ running time growth.

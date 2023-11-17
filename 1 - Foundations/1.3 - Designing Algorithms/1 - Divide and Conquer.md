@@ -84,3 +84,36 @@ MERGE_SORT(A, p, r)
     # Merge the subarrays
     MERGE(A, p, q, r)
 ```
+
+### Analysis of Divide and Conquer Algorithms
+
+The running time of a recursive algorithm can be described with a **recurrence equation**, which describes the overall running time on a problem of size $n$ inputs in terms of the running time of the same algorithm on smaller inputs.
+
+The recurrence for the running time of a divide and conquer algorithm is obtained through understanding the three steps. Let $T(n)$ be the worse-case running time on a problem of size $n$. If the problem is small enough, suppose $n < n_0$ for some constant $n_0 < 0$, the running time is $\Theta(1)$. Suppose the dividing step yields $a$ subproblems of size $n / b$. The running time to solve all subproblems is therefore $a T(n / b)$. Let $D(n)$ and $C(n)$ be the time to divide the subproblems and combine the solutions, respectively. The recurrence equation is therefore:
+
+$$
+T(n)=  \left\{
+\begin{array}{ll}
+      \Theta(1), & n < n_0 \\
+      D(n) + a T(n / b) + C(n), & \text{otherwise} \\
+\end{array}
+\right.
+$$
+
+Sometimes, the $n / b$ size of the divide step is not an integer. For example, `MERGE_SORT` divides a problem of size $n$ into subproblems of sizes $\text{ceil}(n / 2)$ and $\text{floor}(n / 2)$. Ignoring floors and ceilings does not generally affect the order of growth of a solution to a divide and conquer recurrence equation, so one can just say that both have size $n / 2$.
+
+Another convention adopted here is to omit a statement of the base cases of the recurrence. This is because the base cases are pretty much always $T(n) = \Theta(1)$ if $n < n_0$ for some constant $n_0 > 0$. This is due to the running time of an algorithm on an algorithm on an input of constant size is constant.
+
+#### Analysis of Merge Sort
+
+Setting up the recurrence equation for the Merge Sort Algorithm:
+
+1.  **Divide:** computes the middle of the subarray, which takes constant time. Thus, $D(n) = \Theta(1)$
+2.  **Conquer:** Recursively solving two subproblems of size $n / 2$ contributes $2 T(n / 2)$ to the running time
+3.  **Combine:** Since the `MERGE` procedure on an $n$-element subarray takes $\Theta(n)$ time, we have $C(n) = \Theta(n)$
+
+When we add the functions $D(n)$ and $C(n)$ for the merge sort analysis, we are adding the function that is $\Theta(n)$ and a function that is $\Theta(1)$. This sum is a linear function of $n$. Therefore, Merge Sort's dividing and combining times together are $\Theta(n)$. Therefore, the Merge Sort recurrence is:
+
+$$T(n) = 2 T(n / 2) + \Theta(n)$$
+
+This recurrence relation becomes $T(n) = \Theta(n \log(n))$, which comes the the _Master Theorem_. This will be covered later.

@@ -16,7 +16,7 @@ This algorithm follows the Divide and Conquer method; it sorts a subarray $A[p:r
 
 The recursion "caps out" when it reaches the base case: $\text{length}\left(A[p:r]\right)=1$, when $p=r$. As noted in `INSERTION_SORT`'s loop invariant, a subarray comprising of a single element is always sorted.
 
-The key operation in Merge Sort occurs in the combine step, which merges two adjacent, sorted subarrays. The merge operation is performed by the auxiliary procedure `MERGE(A, p, q, r)`, where the indices of the array follow $p <= q < r$. The procedure assumes that the adjacent subarrays $A[p:q]$ and $A[q+1:r]$ were already recursively sorted.
+The key operation in Merge Sort occurs in the combine step, which merges two adjacent, sorted subarrays. The merge operation is performed by the auxiliary procedure `MERGE(A, p, q, r)`, where the indices of the array follow $p \le q < r$. The procedure assumes that the adjacent subarrays $A[p:q]$ and $A[q+1:r]$ were already recursively sorted.
 
 Each basic step of the sort takes constant time and the total number of basic steps being between $n/2$ and $n$, we can say that merging takes $\Theta(n)$ time. The Merge procedure pseudocode is below:
 
@@ -100,7 +100,7 @@ T(n)=  \left\{
 \right.
 $$
 
-Sometimes, the $n / b$ size of the divide step is not an integer. For example, `MERGE_SORT` divides a problem of size $n$ into subproblems of sizes $\text{ceil}(n / 2)$ and $\text{floor}(n / 2)$. Ignoring floors and ceilings does not generally affect the order of growth of a solution to a divide and conquer recurrence equation, so one can just say that both have size $n / 2$.
+Sometimes, the $n / b$ size of the divide step is not an integer. For example, `MERGE_SORT` divides a problem of size $n$ into subproblems of sizes $\lceil(n / 2)\rceil$ and $\lfloor(n / 2)\rfloor$. Ignoring floors and ceilings does not generally affect the order of growth of a solution to a divide and conquer recurrence equation, so one can just say that both have size $n / 2$.
 
 Another convention adopted here is to omit a statement of the base cases of the recurrence. This is because the base cases are pretty much always $T(n) = \Theta(1)$ if $n < n_0$ for some constant $n_0 > 0$. This is due to the running time of an algorithm on an algorithm on an input of constant size is constant.
 

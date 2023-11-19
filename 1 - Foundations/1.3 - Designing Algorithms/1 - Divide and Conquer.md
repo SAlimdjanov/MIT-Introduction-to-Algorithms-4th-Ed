@@ -116,4 +116,4 @@ When we add the functions $D(n)$ and $C(n)$ for the merge sort analysis, we are 
 
 $$T(n) = 2 T(n / 2) + \Theta(n)$$
 
-This recurrence relation becomes $T(n) = \Theta(n \log(n))$, which comes the the _Master Theorem_. This will be covered later.
+This recurrence relation becomes $T(n) = \Theta(n \log(n))$, which comes from the _Master Theorem_.

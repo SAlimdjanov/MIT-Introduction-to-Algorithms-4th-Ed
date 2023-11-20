@@ -72,11 +72,11 @@ $$
 
 For all $n$ and $a \ge 1$, the function $a^n$ is monotonically increasing in $n$. When convenient, we assume $0^0 = 1$. We can relate the growth of polynomials and exponentials by the following fact; For all real constants $a > 1$ and $b$:
 
-$$\lim_{n \rightarrow \infin} {\frac{n^b}{a^n}} = 0$$
+$$\lim_{n \rightarrow \infty} {\frac{n^b}{a^n}} = 0$$
 
 From which we can conclude that $n^b = o(a^n)$. Thus, for any exponential function with a base strictly greater than $1$ grows faster than any polynomial function. We have for all real $x$:
 
-$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + ... = \sum\limits_{i = 0}^{\infin}{\frac{x^i}{i!}}$$
+$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + ... = \sum\limits_{i = 0}^{\infty}{\frac{x^i}{i!}}$$
 
 For all real $x$, we have the inequality:
 
@@ -92,7 +92,7 @@ $$e^x = 1 + x + \Theta(x^2)$$
 
 We have for all $x$:
 
-$$\lim_{n \rightarrow \infin} {\left(1 + \frac{x}{n}\right)^n} = e^x$$
+$$\lim_{n \rightarrow \infty} {\left(1 + \frac{x}{n}\right)^n} = e^x$$
 
 ## Logarithms
 
@@ -140,12 +140,10 @@ Thus, any positive polynomial function grows faster than any polylogarithmic fun
 Defined for integers $n \ge 0$ as:
 
 $$
-n!=  \left\{
-\begin{array}{ll}
-      1, & n = 0 \\
-      n \cdot (n - 1)!, & n > 0 \\
-\end{array}
-\right.
+\begin{align*}
+      n! &= 1, & n = 0 \\
+      n! &= n \cdot (n - 1)!, & n > 0 \\
+\end{align*}
 $$
 
 Thus, $n! = 1 \cdot 2 \cdot 3 \cdot \cdot \cdot n$. A weak upper bound on the factorial is $n! \le n^n$, since each of the $n$ terms in the factorial product is at most $n$. **Stirling's approximation**, where $e$ is the base of the natural logarithm, gives a tight upper bound, and a lower bound as well:
@@ -171,12 +169,10 @@ $$n! = \sqrt{2 \pi n} \left( \frac{n}{e} \right)^n e^{\alpha_n} \space \space \t
 We use the notation $f^{(i)}(n)$ to denote the function $f(n)$ iteratively applied $i$ times to an initial value of $n$. Formally, let $f(n)$ be a function over real numbers. For nonnegative integers $i$, we recursively define:
 
 $$
-f^{(i)}(n) =  \left\{
-\begin{array}{ll}
-      n, & i = 0 \\
-      f(f^{(i - 1)}(n)), & i > 0 \\
-\end{array}
-\right.
+\begin{align*}
+      f^{(i)}(n) &= n, & i = 0 \\
+      f^{(i)}(n) &= f(f^{(i - 1)}(n)), & i > 0 \\
+\end{align*}
 $$
 
 For example, if $f(n) = 2 n$, then $f^{(i)}(n) = 2^i n$
@@ -185,13 +181,7 @@ For example, if $f(n) = 2 n$, then $f^{(i)}(n) = 2^i n$
 
 We use the notation $\lg^* n$ to denote the iterated logarithm, defined as follows. Suppose we have $\lg^{(i)} n$ with $f(n) = \lg n$. Because the logarithm of a nonpositive number is undefined, $\lg^{(i)} n$ is defined only if $\lg^{(i - 1)} n > 0$. Then we define the iterated logarithm as:
 
-$$
-\lg^* n = \text{min} \left\{
-\begin{array}{ll}
-    i \ge 0 : \lg^{(i) n} \le 1
-\end{array}
-\right\}
-$$
+$$ \lg^* n = \min\set{i \ge 0 : \lg^{(i) n} \le 1}$$
 
 The iterated logarithm grows very slowly.
 
@@ -200,13 +190,11 @@ The iterated logarithm grows very slowly.
 We define the Fibonacci numbers $F_i$, for $i \ge 0$ as:
 
 $$
-F_i =  \left\{
-\begin{array}{ll}
-      0, & i = 0 \\
-      1, & i = 1 \\
-      F_{i - 1} + F_{i - 2}, & i \ge 2 \\
-\end{array}
-\right.
+\begin{align*}
+      F_i &= 0, & i = 0 \\
+      F_i &= 1, & i = 1 \\
+      F_i &= F_{i - 1} + F_{i - 2}, & i \ge 2 \\
+\end{align*}
 $$
 
 Fibonacci numbers are related to the **golden ratio** $\phi$ and its conjugate $\hat{\phi}$, which are the two roots of the equation: $x^2 = x + 1$:

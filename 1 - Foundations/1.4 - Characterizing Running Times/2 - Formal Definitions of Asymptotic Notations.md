@@ -5,11 +5,10 @@
 For a given function $g(n)$, we denote by $O(g(n))$ the set of functions:
 
 $$
-O(g(n))=  \left\{
-\begin{array}{ll}
+O(g(n)) =
+\set{
     f(n) : \text{there exist positive constants } c \text{ and } n_0 \text{ such that } 0 \le f(n) \le c g(n) \text{ for all } n \ge n_0
-\end{array}
-\right\}
+}
 $$
 
 A function $f(n)$ belongs to the set $O(g(n))$ if there exists a positive constant $c$ such that $f(n) \le c g(n)$ for sufficiently large $n$. This definition requires all functions in the set to be **asymptotically nonnegative:** $f(n)$ must be nonnegative whenever $n$ is sufficiently large. (An **asymptotically positive** function is one that is positive for all sufficently large $n$) Consequently, the function $g(n)$ itself must be asymptotically nonnegative, or else the set $O(g(n))$ is empty. We therefore assume that every function used within $O$-notation is asymptotically nonnegative. This assumption holds for other notations discussed here.
@@ -29,11 +28,10 @@ This inequality is satisfied for many choices of $c$ and $n_0$. We can also use 
 For a given function $g(n)$, we denote by $\Omega(g(n))$ the set of functions:
 
 $$
-\Omega(g(n))=  \left\{
-\begin{array}{ll}
+\Omega(g(n)) =
+\set {
     f(n) : \text{there exist positive constants } c \text{ and } n_0 \text{ such that } 0 \le c g(n) \le f(n) \text{ for all } n \ge n_0
-\end{array}
-\right\}
+}
 $$
 
 #### Example
@@ -47,11 +45,10 @@ We need to find constants $c$ and $n_0$ such that $4 n^2 + 100 n + 500 \ge c n^2
 For a given function $g(n)$, we denote by $\Theta(g(n))$ the set of functions:
 
 $$
-\Theta(g(n))=  \left\{
-\begin{array}{ll}
+\Theta(g(n)) =
+\set{
     f(n) : \text{there exist positive constants } c_1, c_2 \text{ and } n_0 \text{ such that } 0 \le c_1 g(n) \le f(n) \le c_2 g(n) \text{ for all } n \ge n_0
-\end{array}
-\right\}
+}
 $$
 
 The previous definitions lead to the following theorem:
@@ -65,16 +62,15 @@ Therefore, proving that a function is satisfies the definitions of $O$ and $\Ome
 The asymptotic upper bound provided by $O$-notation may or may not be asymptotically tight. We use $o$-notation to denote an upper bound that is not asymptotically tight. We formally define $o(g(n))$ as the set:
 
 $$
-o(g(n))=  \left\{
-\begin{array}{ll}
+o(g(n)) =
+\set{
     f(n) : \text{for any positive constant } c > 0, \text{ there exists a constant } n_0 > 0 \text{ such that } 0 \le f(n) < c g(n) \text{ for all } n \ge n_0
-\end{array}
-\right\}
+}
 $$
 
 For example, $2 n = o(n^2)$, but $2 n^2 \ne o(n^2)$. The definitions of $O$-notation and $o$-notation are similar. The main difference is that in $f(n) = O(g(n))$, the bound $0 \le f(n) \le c g(n)$ holds for some constants $c > 0$, but in $f(n) = o(g(n))$, the bound $0 \le f(n) < c g(n)$ holds for all constants $c > 0$. In $o$-notation, the function $f(n)$ becomes insignificant relative to $g(n)$ as $n$ gets large:
 
-$$\lim_{n \rightarrow \infin} {\frac{f(n)}{g(n)}} = 0$$
+$$\lim_{n \rightarrow \infty} {\frac{f(n)}{g(n)}} = 0$$
 
 This definition restricts the anonymous functions to be asymptotically nonnegative.
 
@@ -87,15 +83,14 @@ $$f(n) \in \omega(g(n)) \text{ if and only if } g(n) \in o(f(n))$$
 The formal definition is that $\omega(g(n))$ is in the set:
 
 $$
-\omega(g(n))=  \left\{
-\begin{array}{ll}
+\omega(g(n)) =
+\set{
     f(n) : \text{for any positive constant } c > 0, \text{ there exists a constant } n_0 > 0 \text{ such that } 0 \le c g(n) < f(n) \text{ for all } n \ge n_0
-\end{array}
-\right\}
+}
 $$
 
 Where the definition of $o$-notation says that $f(n) < c g(n)$, this says the opposite: that $c g(n) < f(n)$. For examples of $\omega$-notation, we have $n^2 / 2 = \omega(n)$, but $n^2 / 2 \ne \omega(n^2)$. The relation $f(n) = \omega(g(n))$ implies that:
 
-$$\lim_{n \rightarrow \infin} {\frac{f(n)}{g(n)}} = \infin$$
+$$\lim_{n \rightarrow \infty} {\frac{f(n)}{g(n)}} = \infty$$
 
 If the limit exists. That is $f(n)$ becomes arbitrarily large relative to $g(n)$ as $n$ gets large.

@@ -12,7 +12,3 @@ This repository contains notes, code, and practice problems from _Introduction t
 4. Characterizing Running Times
 5. Divide and Conquer
 6. Probabilistic Analysis
-
-<br>
-
-**Note:** Some mathematical expressions do not render properly on GitHub, and it appears to be related to the website's LaTeX rendering capabilities. All expressions render correctly in my local environment.

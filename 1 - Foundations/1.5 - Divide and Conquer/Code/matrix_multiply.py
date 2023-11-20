@@ -7,6 +7,9 @@ matrix_multiply.py
 def matrix_multiply_naive(a, b, c, n):
     """Naive implementation of matrix multiplication
 
+    Time complexity: O(n^3)
+    Space complexity: O(1)
+
     Args:
         A (2D list): Matrix A
         B (2D list): Matrix B
@@ -21,6 +24,9 @@ def matrix_multiply_naive(a, b, c, n):
 
 def matrix_multiply_recursive(a, b, c, n):
     """The divide-and-conquer (recursive) implementation of matrix multiplication
+
+    Time complexity: O(n^3)
+    Space complexity: O(n log(n))
 
     Args:
         A (2D list): Matrix A

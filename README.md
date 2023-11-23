@@ -12,3 +12,7 @@ This repository contains notes, code, and practice problems from _Introduction t
 4. Characterizing Running Times
 5. Divide and Conquer
 6. Probabilistic Analysis
+
+### 2 - Sorting and Order Statistics
+
+1. Heap Sort

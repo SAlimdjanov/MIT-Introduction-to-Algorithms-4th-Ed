@@ -11,7 +11,7 @@ export default class Heap {
     }
 
     parent(index) {
-        return Math.floor(index / 2);
+        return Math.floor((index - 1) / 2);
     }
 
     leftChild(index) {

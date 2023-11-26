@@ -27,8 +27,6 @@ class Heapify(Heap):
         left_child = self.left_child(index)
         right_child = self.right_child(index)
 
-        # Note: Beware of pseudocode, '<' replaced '<=' due to the arrays being 0-indexed
-
         if left_child < self.heap_size and self.heap[left_child] > self.heap[index]:
             largest = left_child
         else:

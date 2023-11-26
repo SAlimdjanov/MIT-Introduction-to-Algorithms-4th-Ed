@@ -28,7 +28,10 @@ class HeapSort(BuildHeap):
 
 
 def main():
-    """Main method"""
+    """
+    Main method
+
+    """
     input_array = [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
     heap_sort = HeapSort(input_array)
 

@@ -22,7 +22,10 @@ class BuildHeap(Heapify):
 
 
 def main():
-    """Main method"""
+    """
+    Main method
+
+    """
     array = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
 
     construct_max_heap = BuildHeap(array)

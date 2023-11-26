@@ -7,7 +7,7 @@ from math import floor
 from heapify import Heapify
 
 
-class ConstructMaxHeap(Heapify):
+class BuildHeap(Heapify):
     """Build Max Heap Class"""
 
     def build_max_heap(self):
@@ -25,11 +25,11 @@ def main():
     """Main method"""
     array = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
 
-    construct_max_heap = ConstructMaxHeap(array)
+    construct_max_heap = BuildHeap(array)
     construct_max_heap.build_max_heap()
     print(construct_max_heap.heap)
 
-    construct_min_heap = ConstructMaxHeap(array)
+    construct_min_heap = BuildHeap(array)
     construct_min_heap.build_min_heap()
     print(construct_min_heap.heap)
 

@@ -1,7 +1,5 @@
-/*
- * MaxHeapify.mjs
- *
- * JavaScript implementation of the MaxHeapify procedure
+/**
+ * Heapify.mjs
  *
  */
 

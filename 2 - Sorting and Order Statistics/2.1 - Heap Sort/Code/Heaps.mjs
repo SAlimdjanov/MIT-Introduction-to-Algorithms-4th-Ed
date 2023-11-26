@@ -1,7 +1,5 @@
-/*
+/**
  * Heaps.mjs
- *
- * JavaScript implementation of Heaps
  *
  */
 

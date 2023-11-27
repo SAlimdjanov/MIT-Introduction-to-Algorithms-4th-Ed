@@ -16,3 +16,4 @@ This repository contains notes, code, and practice problems from _Introduction t
 ### 2 - Sorting and Order Statistics
 
 1. Heap Sort
+2. Quick Sort

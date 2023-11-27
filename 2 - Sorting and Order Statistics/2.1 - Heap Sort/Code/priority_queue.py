@@ -163,7 +163,7 @@ def main():
     # Extract max: Remove and return maximum priority
     max_priority = max_priority_queue.extract_max()
     print_data(max_priority_queue, "Extract Max")
-    print(f"The task with priority {max_priority} was removed from the queue")
+    print(f"Highest priority ('{max_priority}') task was removed from the queue")
 
     # Increase Key: Change the priority of 'Professional development' to be 11
     max_priority_queue.increase_key(tasks[8], 11)

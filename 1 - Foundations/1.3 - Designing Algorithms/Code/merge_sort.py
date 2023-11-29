@@ -1,18 +1,13 @@
 """
 merge_sort.py
 
-Contains implementation of Merge Sort and other problems presented in this section of the book.
-
-Time complexity: O(n log(n))
-Space complexity: O(n)
-
 """
 
 from math import floor
 
 
 def merge(array, start, midpoint, end):
-    """Merge function
+    """Merging procedure
 
     Args:
         array (list[int]): Integer array
@@ -57,6 +52,9 @@ def merge(array, start, midpoint, end):
 def merge_sort(array, start, end):
     """Merge Sort Algorithm
 
+    Time complexity: O(n log n)
+    Space complexity: O(n)
+
     Args:
         array (list[int]): Integer array
         start (int): Start index
@@ -74,7 +72,10 @@ def merge_sort(array, start, end):
 
 
 def main():
-    """Main method"""
+    """
+    Main method
+
+    """
     array = [2, 4, 6, 7, 1, 2, 3, 5]
     merge_sort(array, 0, 7)
     print(array)

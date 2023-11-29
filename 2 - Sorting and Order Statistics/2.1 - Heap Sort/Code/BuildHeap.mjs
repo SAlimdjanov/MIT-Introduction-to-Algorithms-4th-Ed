@@ -5,19 +5,19 @@
 
 import Heapify from "./Heapify.mjs";
 
-export default class BuildHeap extends Heapify {
+class BuildHeap extends Heapify {
     constructor(heap) {
         super(heap);
     }
 
     buildMaxHeap() {
-        for (var i = Math.floor(this.heapSize / 2); i > -1; i--) {
+        for (let i = Math.floor(this.heapSize / 2); i > -1; i--) {
             this.maxHeapify(i);
         }
     }
 
     buildMinHeap() {
-        for (var i = Math.floor(this.heapSize / 2); i > -1; i--) {
+        for (let i = Math.floor(this.heapSize / 2); i > -1; i--) {
             this.minHeapify(i);
         }
     }
@@ -37,3 +37,5 @@ const main = () => {
 };
 
 // main();
+
+export default BuildHeap;

@@ -10,20 +10,43 @@ class Heap:
     """Heap class"""
 
     def __init__(self, heap):
-        """Takes input array upon object initialization"""
+        """
+        Args:
+            heap (list[int]): List representation of a valid binary heap
+        """
         self.heap = heap
 
     def parent(self, index):
-        """Returns the index of the parent node given an index of a child node"""
+        """Returns the index of the parent node given an index of a child node
+
+        Args:
+            index (int): Child node index
+
+        Returns:
+            int: Index of the parent node
+        """
         return floor((index - 1) / 2) if index != 0 else 0
 
     def left_child(self, index):
-        """Returns the index of the left child of a node at a given index"""
+        """Returns the index of the left child of a node at a given index
+
+        Args:
+            index (int): Parent node index
+
+        Returns:
+            int: Index of the left child node
+        """
         return 2 * index + 1
-        # return left if left < len(self.heap) else None
 
     def right_child(self, index):
-        """Returns the index of the right child of a node at a given index"""
+        """Returns the index of the right child of a node at a given index
+
+        Args:
+            index (int): Parent node index
+
+        Returns:
+            int: Index of the right child node
+        """
         return 2 * (index + 1)
 
     def validate_node(self, node_index):

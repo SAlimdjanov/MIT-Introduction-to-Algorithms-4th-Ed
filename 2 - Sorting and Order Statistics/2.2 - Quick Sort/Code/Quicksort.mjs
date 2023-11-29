@@ -3,7 +3,7 @@
  *
  */
 
-export default class Quicksort {
+class Quicksort {
     constructor(array) {
         this.array = array;
     }
@@ -12,7 +12,7 @@ export default class Quicksort {
         let x = this.array[r];
         let i = p - 1;
 
-        for (var j = p; j < r; j++) {
+        for (let j = p; j < r; j++) {
             if (this.array[j] <= x) {
                 i += 1;
                 let temp = this.array[i];
@@ -48,3 +48,5 @@ const main = () => {
 };
 
 // main();
+
+export default Quicksort;

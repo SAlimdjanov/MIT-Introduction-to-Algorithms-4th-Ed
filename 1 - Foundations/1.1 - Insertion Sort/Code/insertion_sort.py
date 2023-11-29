@@ -1,24 +1,21 @@
 """
 insertion_sort.py
 
-Contains implementation of Insertion Sort and other problems presented in this section of the book.
-
-Time complexity: O(n^2)
-Space complexity: O(n)
-
 """
 
 
 def insertion_sort(sequence, n):
     """Insertion Sort Algorithm
 
+    Time complexity: O(n^2)
+    Space complexity: O(n)
+
     Args:
-        A (list[int]): Sequence of integers
+        sequence (list[int]): Sequence of integers
         n (int): Number of elements
 
     Returns:
         list[int]: Sorted sequence
-
     """
     for i in range(1, n):
         key = sequence[i]
@@ -36,19 +33,20 @@ def insertion_sort(sequence, n):
 def insertion_sort_reversed(sequence, n):
     """Reversed Insertion Sort Algorithm
 
+    Time complexity: O(n^2)
+    Space complexity: O(n)
+
     Args:
-        A (list[int]): Sequence of integers
+        sequence (list[int]): Sequence of integers
         n (int): Number of elements
 
     Returns:
         list[int]: Sorted sequence (descending order)
-
     """
     for i in range(1, n):
         key = sequence[i]
         j = i - 1
 
-        # Change comparison of sequence[j] and key to reverse sorting
         while j >= 0 and sequence[j] < key:
             sequence[j + 1] = sequence[j]
             j -= 1
@@ -60,8 +58,10 @@ def insertion_sort_reversed(sequence, n):
 
 def binary_addition(bin_a, bin_b, n):
     """
-    Performs binary addition of two n bit binary numbers stored in lists in O(n) time and space
-    complexity.
+    Performs binary addition of two n bit binary numbers stored in lists.
+
+    Time complexity: O(n)
+    Space complexity: O(n)
 
     Args:
         bin_a (list[int]): List of integers valued 0 or 1
@@ -70,7 +70,6 @@ def binary_addition(bin_a, bin_b, n):
 
     Returns:
         list[int]: The resulting list C
-
     """
     bin_c = [0] * (n + 1)
     carry_bit = 0

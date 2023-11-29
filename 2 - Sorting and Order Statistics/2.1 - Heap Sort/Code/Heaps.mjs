@@ -3,7 +3,7 @@
  *
  */
 
-export default class Heap {
+class Heap {
     constructor(heap) {
         this.heap = heap;
     }
@@ -22,10 +22,10 @@ export default class Heap {
 }
 
 const main = () => {
-    const maxHeap = [16, 14, 10, 8, 7, 8, 3, 2, 4, 1];
+    let maxHeap = [16, 14, 10, 8, 7, 8, 3, 2, 4, 1];
     let myMaxHeap = new Heap(maxHeap);
-    const childIndex = 1;
-    const parentIndex = 1;
+    let childIndex = 1;
+    let parentIndex = 1;
 
     let parentNode = maxHeap[myMaxHeap.parent(childIndex)];
     let leftChildNode = maxHeap[myMaxHeap.leftChild(parentIndex)];
@@ -41,3 +41,5 @@ const main = () => {
 };
 
 // main();
+
+export default Heap;

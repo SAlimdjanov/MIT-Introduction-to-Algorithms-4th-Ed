@@ -5,7 +5,7 @@
 
 import Quicksort from "./Quicksort.mjs";
 
-export default class RandomizedQuicksort extends Quicksort {
+class RandomizedQuicksort extends Quicksort {
     constructor(array) {
         super(array);
     }
@@ -14,7 +14,7 @@ export default class RandomizedQuicksort extends Quicksort {
         let x = this.array[r];
         let i = p - 1;
 
-        for (var j = p; j < r; j++) {
+        for (let j = p; j < r; j++) {
             if (this.array[j] <= x) {
                 i += 1;
                 let temp = this.array[i];
@@ -50,4 +50,6 @@ const main = () => {
     console.log(randomSort.array);
 };
 
-main();
+// main();
+
+export default RandomizedQuicksort;

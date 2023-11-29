@@ -1,16 +1,14 @@
 /*
- * MergeSort.js
- *
- * JavaScript implementation of the Merge Sort Algorithm
+ * MergeSort.mjs
  *
  */
 
 function merge(array, start, midpoint, end) {
-    const lenLeft = midpoint - start + 1;
-    const lenRight = end - midpoint;
+    let lenLeft = midpoint - start + 1;
+    let lenRight = end - midpoint;
 
-    const left = new Array(lenLeft).fill(0);
-    const right = new Array(lenRight).fill(0);
+    let left = new Array(lenLeft).fill(0);
+    let right = new Array(lenRight).fill(0);
 
     for (let i = 0; i < lenLeft; i++) {
         left[i] = array[start + i];
@@ -53,7 +51,7 @@ function mergeSort(array, start, end) {
         return;
     }
 
-    const midpoint = Math.floor((start + end) / 2);
+    let midpoint = Math.floor((start + end) / 2);
 
     mergeSort(array, start, midpoint);
     mergeSort(array, midpoint + 1, end);
@@ -61,6 +59,13 @@ function mergeSort(array, start, end) {
     merge(array, start, midpoint, end);
 }
 
-var inputArray = [2, 4, 6, 7, 1, 2, 3, 5];
-mergeSort(inputArray, 0, 7);
-console.log(inputArray);
+const main = () => {
+    let inputArray = [2, 4, 6, 7, 1, 2, 3, 5];
+    mergeSort(inputArray, 0, 7);
+
+    console.log(inputArray);
+};
+
+// main();
+
+export default mergeSort;

@@ -5,7 +5,7 @@
 
 import Heap from "./Heaps.mjs";
 
-export default class Heapify extends Heap {
+class Heapify extends Heap {
     constructor(heap) {
         super(heap);
         this.heapSize = heap.length;
@@ -71,3 +71,5 @@ const main = () => {
 };
 
 // main();
+
+export default Heapify;

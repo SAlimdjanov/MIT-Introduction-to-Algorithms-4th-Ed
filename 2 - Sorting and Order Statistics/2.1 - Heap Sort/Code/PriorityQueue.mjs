@@ -4,7 +4,7 @@
 
 import Heapify from "./Heapify.mjs";
 
-export default class MaxHeapPriorityQueue extends Heapify {
+class MaxHeapPriorityQueue extends Heapify {
     constructor(heap, tasks, queue) {
         super(heap);
         this.tasks = tasks;
@@ -67,6 +67,7 @@ export default class MaxHeapPriorityQueue extends Heapify {
         this.heapSize += 1;
         let k = priority;
         priority = Number.NEGATIVE_INFINITY;
+
         this.heap.push(priority);
         this.tasks.push(task);
         this.queue.set(priority, task);
@@ -81,7 +82,7 @@ const logData = (queueObj, action) => {
     console.log(`Task List: ${queueObj.tasks}`);
     console.log("Queue:");
 
-    for (var [key, value] of queueObj.queue.entries()) {
+    for (let [key, value] of queueObj.queue.entries()) {
         console.log(`${key}: ${value}`);
     }
 };
@@ -89,7 +90,7 @@ const logData = (queueObj, action) => {
 const constructQueue = (keys, values) => {
     let queue = new Map();
 
-    for (var i = 0; i < keys.length; i++) {
+    for (let i = 0; i < keys.length; i++) {
         queue.set(keys[i], values[i]);
     }
 
@@ -127,6 +128,7 @@ const main = () => {
 
     maxPriorityQueue.increaseKey(tasks[8], 11);
     logData(maxPriorityQueue, "Increase Key");
+    console.log(`Task ${tasks[8]} of was increased to priority ${11}`);
 
     let newTask = "Urgent Matter!";
     let newPriority = 17;
@@ -138,3 +140,5 @@ const main = () => {
 };
 
 main();
+
+export default MaxHeapPriorityQueue;

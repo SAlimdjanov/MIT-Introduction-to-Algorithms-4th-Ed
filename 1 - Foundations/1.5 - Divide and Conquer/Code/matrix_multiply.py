@@ -4,8 +4,8 @@ matrix_multiply.py
 """
 
 
-def matrix_multiply_naive(a, b, c, n):
-    """Naive implementation of matrix multiplication
+def matrix_multiply_iterative(a, b, c, n):
+    """Iterative implementation of matrix multiplication
 
     Time complexity: O(n^3)
     Space complexity: O(1)
@@ -91,8 +91,8 @@ def main():
     matrix_b = [[16, 17, 18, 19], [20, 21, 22, 23], [24, 25, 26, 27], [28, 29, 30, 31]]
     matrix_c = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 
-    matrix_multiply_naive(matrix_a, matrix_b, matrix_c, len(matrix_c))
-    print("---Naive---")
+    matrix_multiply_iterative(matrix_a, matrix_b, matrix_c, len(matrix_c))
+    print("---Iterative---")
     print_matrix(matrix_c)
 
     matrix_c = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]

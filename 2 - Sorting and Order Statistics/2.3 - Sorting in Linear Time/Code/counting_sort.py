@@ -32,21 +32,3 @@ def counting_sort(array, n, k):
         memo[array[x]] = memo[array[x]] - 1
 
     return sorted_output
-
-
-def main():
-    """
-    Main method
-
-    """
-    duplicate_array = [6, 0, 2, 0, 1, 3, 4, 6, 3, 1, 2]
-    result1 = counting_sort(duplicate_array, len(duplicate_array), max(duplicate_array))
-    print(result1)
-
-    array = [0, 2, 7, 3, 4, 6, 5, 1, 8]
-    result2 = counting_sort(array, len(array), max(array))
-    print(result2)
-
-
-if __name__ == "__main__":
-    main()

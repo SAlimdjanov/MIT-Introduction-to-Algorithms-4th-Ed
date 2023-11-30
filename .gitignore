@@ -1,3 +1,14 @@
+# VS Code
 .vscode
+
+# Python
 *__pycache__
+*.pytest_cache
+__init__.py
+
+# Node.js
+node_modules
+package-lock.json
+
+# Misc.
 .DS_Store

@@ -1,5 +1,5 @@
 /**
- * BucketSort.mjs
+ * BucketSort.js
  *
  */
 
@@ -24,12 +24,4 @@ function bucketSort(array, n) {
     return sortedArray;
 }
 
-const main = () => {
-    let array = [0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21];
-    let result = bucketSort(array, array.length);
-    console.log(result);
-};
-
-main();
-
-export default bucketSort;
+module.exports = bucketSort;

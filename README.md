@@ -1,6 +1,6 @@
 # Introduction to Algorithms, 4th Ed.
 
-This repository contains notes, code, and practice problems from _Introduction to Algorithms, 4th Ed._ written by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein, published by MIT Press. Additional resources pertaining to the book can be found [here](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/).
+This repository contains notes, implementation, and unit tests pertaining to various data structures and algorithms from the book _Introduction to Algorithms, 4th Ed._ written by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein, published by MIT Press. Additional book resources can be found [here](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/).
 
 ## Contents
 

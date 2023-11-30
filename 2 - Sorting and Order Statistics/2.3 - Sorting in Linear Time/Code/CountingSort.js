@@ -1,5 +1,5 @@
 /**
- * CountingSort.mjs
+ * CountingSort.js
  *
  */
 
@@ -25,20 +25,4 @@ function countingSort(array, n, k) {
     return sortedOutput;
 }
 
-const main = () => {
-    let duplicateArray = [6, 0, 2, 0, 1, 3, 4, 6, 3, 1, 2];
-    let result1 = countingSort(
-        duplicateArray,
-        duplicateArray.length,
-        Math.max(...duplicateArray)
-    );
-    console.log(result1);
-
-    let array = [0, 2, 7, 3, 4, 6, 5, 1, 8];
-    let result2 = countingSort(array, array.length, Math.max(...array));
-    console.log(result2);
-};
-
-// main();
-
-export default countingSort;
+module.exports = countingSort;

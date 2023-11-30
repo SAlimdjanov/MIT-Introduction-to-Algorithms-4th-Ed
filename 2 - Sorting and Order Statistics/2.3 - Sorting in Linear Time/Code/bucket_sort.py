@@ -32,17 +32,3 @@ def bucket_sort(array, n):
         sorted_array.extend(aux_array[i])
 
     return sorted_array
-
-
-def main():
-    """
-    Main method
-
-    """
-    array = [0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21]
-    result = bucket_sort(array, len(array))
-    print(result)
-
-
-if __name__ == "__main__":
-    main()

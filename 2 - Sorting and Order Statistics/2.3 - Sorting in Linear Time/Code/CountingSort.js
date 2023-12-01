@@ -4,10 +4,10 @@
  */
 
 function countingSort(array, n, k) {
-    let sortedOutput = new Array(n).fill(0);
+    let sortedOutput = Array(n).fill(0);
 
     let memoLength = k + 1;
-    let memo = new Array(memoLength).fill(0);
+    let memo = Array(memoLength).fill(0);
 
     for (let i = 0; i < n; i++) {
         memo[array[i]] = memo[array[i]] + 1;

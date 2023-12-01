@@ -1,14 +1,16 @@
 /**
- * Quicksort.mjs
+ * RandomizedQuicksort.js
  *
  */
 
-class Quicksort {
+const Quicksort = require("./Quicksort");
+
+class RandomizedQuicksort extends Quicksort {
     constructor(array) {
-        this.array = array;
+        super(array);
     }
 
-    partition(p, r) {
+    randomizedPartition(p, r) {
         let x = this.array[r];
         let i = p - 1;
 
@@ -28,25 +30,13 @@ class Quicksort {
         return i + 1;
     }
 
-    quicksort(p, r) {
+    randomizedQuicksort(p, r) {
         if (p < r) {
             let q = this.partition(p, r);
-            this.quicksort(p, q - 1);
-            this.quicksort(q + 1, r);
+            this.randomizedQuicksort(p, q - 1);
+            this.randomizedQuicksort(q + 1, r);
         }
     }
 }
 
-const main = () => {
-    let array = [2, 8, 7, 1, 3, 5, 6, 4];
-    let p = 0;
-    let r = array.length - 1;
-
-    let sort = new Quicksort(array);
-    sort.quicksort(p, r);
-    console.log(sort.array);
-};
-
-// main();
-
-export default Quicksort;
+module.exports = RandomizedQuicksort;

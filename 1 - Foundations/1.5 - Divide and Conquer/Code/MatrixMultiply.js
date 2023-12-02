@@ -1,9 +1,9 @@
 /*
- * MatrixMultiply.mjs
+ * MatrixMultiply.js
  *
  */
 
-export function matrixMultiplyIterative(A, B, C, n) {
+function matrixMultiplyIterative(A, B, C, n) {
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
             for (let k = 0; k < n; k++) {
@@ -13,7 +13,7 @@ export function matrixMultiplyIterative(A, B, C, n) {
     }
 }
 
-export function matrixMultiplyRecursive(A, B, C, n) {
+function matrixMultiplyRecursive(A, B, C, n) {
     if (n === 1) {
         C[0][0] = C[0][0] + A[0][0] * B[0][0];
         return;
@@ -53,40 +53,4 @@ export function matrixMultiplyRecursive(A, B, C, n) {
     }
 }
 
-const main = () => {
-    let matrixA = [
-        [0, 1, 2, 3],
-        [4, 5, 6, 7],
-        [8, 9, 10, 11],
-        [12, 13, 14, 15],
-    ];
-    let matrixB = [
-        [16, 17, 18, 19],
-        [20, 21, 22, 23],
-        [24, 25, 26, 27],
-        [28, 29, 30, 31],
-    ];
-    let matrixC = [
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-    ];
-
-    matrixMultiplyIterative(matrixA, matrixB, matrixC, matrixC.length);
-    console.log("---Naive---");
-    console.log(matrixC);
-
-    matrixC = [
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-    ];
-
-    matrixMultiplyRecursive(matrixA, matrixB, matrixC, matrixC.length);
-    console.log("---Recursive---");
-    console.log(matrixC);
-};
-
-// main();
+module.exports = { matrixMultiplyIterative, matrixMultiplyRecursive };

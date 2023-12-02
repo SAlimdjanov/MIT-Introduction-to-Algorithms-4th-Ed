@@ -74,32 +74,3 @@ def matrix_multiply_recursive(a, b, c, n):
             c[i][j + n // 2] = c12[i][j]
             c[i + n // 2][j] = c21[i][j]
             c[i + n // 2][j + n // 2] = c22[i][j]
-
-
-def print_matrix(matrix):
-    """Print matrix rows"""
-    for row in matrix:
-        print(row)
-
-
-def main():
-    """
-    Main method
-
-    """
-    matrix_a = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15]]
-    matrix_b = [[16, 17, 18, 19], [20, 21, 22, 23], [24, 25, 26, 27], [28, 29, 30, 31]]
-    matrix_c = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
-
-    matrix_multiply_iterative(matrix_a, matrix_b, matrix_c, len(matrix_c))
-    print("---Iterative---")
-    print_matrix(matrix_c)
-
-    matrix_c = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
-    matrix_multiply_recursive(matrix_a, matrix_b, matrix_c, len(matrix_c))
-    print("---Recursive---")
-    print_matrix(matrix_c)
-
-
-if __name__ == "__main__":
-    main()

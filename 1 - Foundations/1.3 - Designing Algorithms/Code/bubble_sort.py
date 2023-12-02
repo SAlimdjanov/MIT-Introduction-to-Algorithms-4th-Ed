@@ -19,18 +19,3 @@ def bubble_sort(array):
         for j in range(n - 1, i, -1):
             if array[j] < array[j - 1]:
                 array[j], array[j - 1] = array[j - 1], array[j]
-
-
-def main():
-    """
-    Main method
-
-    """
-    array = [2, 4, 6, 7, 1, 2, 3, 5, 8, 10, 9]
-
-    bubble_sort(array)
-    print(array)
-
-
-if __name__ == "__main__":
-    main()

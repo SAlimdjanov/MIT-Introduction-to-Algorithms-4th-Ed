@@ -23,19 +23,3 @@ def horners_rule(coeff, x):
         result = coeff[i] + x * result
 
     return result
-
-
-def main():
-    """
-    Main method
-
-    """
-    # 1 + 2x + 3x^2 + 4x^4
-    polynomial_coeff = [1, 2, 3, 0, 4]
-
-    p = horners_rule(polynomial_coeff, x=5)
-    print(p)
-
-
-if __name__ == "__main__":
-    main()

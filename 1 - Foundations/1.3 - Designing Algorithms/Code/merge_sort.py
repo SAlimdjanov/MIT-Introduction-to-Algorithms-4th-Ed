@@ -69,17 +69,3 @@ def merge_sort(array, start, end):
     merge_sort(array, midpoint + 1, end)
 
     merge(array, start, midpoint, end)
-
-
-def main():
-    """
-    Main method
-
-    """
-    array = [2, 4, 6, 7, 1, 2, 3, 5]
-    merge_sort(array, 0, 7)
-    print(array)
-
-
-if __name__ == "__main__":
-    main()

@@ -1,5 +1,5 @@
 /*
- * MergeSort.mjs
+ * MergeSort.js
  *
  */
 
@@ -59,13 +59,4 @@ function mergeSort(array, start, end) {
     merge(array, start, midpoint, end);
 }
 
-const main = () => {
-    let inputArray = [2, 4, 6, 7, 1, 2, 3, 5];
-    mergeSort(inputArray, 0, 7);
-
-    console.log(inputArray);
-};
-
-// main();
-
-export default mergeSort;
+module.exports = mergeSort;

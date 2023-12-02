@@ -1,5 +1,5 @@
 /*
- * BubbleSort.mjs
+ * BubbleSort.js
  *
  */
 
@@ -17,13 +17,4 @@ function bubbleSort(array) {
     }
 }
 
-const main = () => {
-    var array = [2, 4, 6, 7, 1, 2, 3, 5, 8, 10, 9];
-    bubbleSort(array);
-
-    console.log(array);
-};
-
-// main();
-
-export default bubbleSort();
+module.exports = bubbleSort;

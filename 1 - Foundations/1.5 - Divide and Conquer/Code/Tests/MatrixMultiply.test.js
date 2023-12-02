@@ -47,7 +47,7 @@ test("Iterative function produces the correct answer", () => {
     expect(matrixC).toStrictEqual(answer);
 });
 
-test("should first", () => {
+test("Recursive function produces the correct answer", () => {
     let newMatrixC = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],

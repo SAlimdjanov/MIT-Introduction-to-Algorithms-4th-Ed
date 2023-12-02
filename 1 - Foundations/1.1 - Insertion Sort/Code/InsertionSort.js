@@ -1,9 +1,9 @@
 /*
- * InsertionSort.mjs
+ * InsertionSort.js
  *
  */
 
-export function insertionSort(sequence, n) {
+function insertionSort(sequence, n) {
     for (let i = 0; i < n; i++) {
         let key = sequence[i];
 
@@ -18,7 +18,7 @@ export function insertionSort(sequence, n) {
     return sequence;
 }
 
-export function insertionSortReversed(sequence, n) {
+function insertionSortReversed(sequence, n) {
     for (let i = 0; i < n; i++) {
         let key = sequence[i];
 
@@ -33,7 +33,7 @@ export function insertionSortReversed(sequence, n) {
     return sequence;
 }
 
-export function binaryArrayAddition(binA, binB, n) {
+function binaryArrayAddition(binA, binB, n) {
     let binC = new Array(n + 1).fill(0);
     let carryBit = 0;
 
@@ -47,14 +47,4 @@ export function binaryArrayAddition(binA, binB, n) {
     return binC;
 }
 
-const main = () => {
-    let inputList = [5, 2, 4, 6, 1, 3];
-    let binA = [1, 0, 1, 0];
-    let binB = [1, 1, 1, 1];
-
-    console.log(insertionSort(inputList, inputList.length));
-    console.log(insertionSortReversed(inputList, inputList.length));
-    console.log(binaryArrayAddition(binA, binB, binA.length));
-};
-
-// main();
+module.exports = { insertionSort, insertionSortReversed, binaryArrayAddition };

@@ -56,7 +56,7 @@ def insertion_sort_reversed(sequence, n):
     return sequence
 
 
-def binary_addition(bin_a, bin_b, n):
+def binary_array_addition(bin_a, bin_b, n):
     """
     Performs binary addition of two n bit binary numbers stored in lists.
 
@@ -82,25 +82,3 @@ def binary_addition(bin_a, bin_b, n):
     bin_c[0] = carry_bit
 
     return bin_c
-
-
-def main():
-    """
-    Main method
-
-    """
-    sequence = [5, 2, 4, 6, 1, 3]
-    bin_a, bin_b = [1, 0, 1, 0], [1, 1, 1, 1]
-
-    result = insertion_sort(sequence, len(sequence))
-    print(result)
-
-    result_reversed = insertion_sort_reversed(sequence, len(sequence))
-    print(result_reversed)
-
-    result_binary_addition = binary_addition(bin_a, bin_b, len(bin_b))
-    print(result_binary_addition)
-
-
-if __name__ == "__main__":
-    main()

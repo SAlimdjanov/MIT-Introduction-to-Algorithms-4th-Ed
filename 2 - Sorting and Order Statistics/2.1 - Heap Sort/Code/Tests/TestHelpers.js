@@ -1,8 +1,6 @@
 /**
  * TestHelpers.js
  *
- * Contains helper functions for unit tests in this directory
- *
  */
 
 const isMaxHeap = (heap) => {

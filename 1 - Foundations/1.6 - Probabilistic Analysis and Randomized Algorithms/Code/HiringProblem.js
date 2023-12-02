@@ -1,9 +1,9 @@
 /*
- * HiringProblem.mjs
+ * HiringProblem.js
  *
  */
 
-export function hireAssistant(candidatesList, n) {
+function hireAssistant(candidatesList, n) {
     let best = 0;
     let hiredCandidates = [];
 
@@ -29,13 +29,13 @@ function permuteArray(array, n) {
     }
 }
 
-export function randomizedHireAssistant(candidatesList, n) {
+function randomizedHireAssistant(candidatesList, n) {
     permuteArray(candidatesList, n);
     let result = hireAssistant(candidatesList, n);
     return result;
 }
 
-export function onlineHiringProblem(k, n, scoresList) {
+function onlineHiringProblem(k, n, scoresList) {
     let bestScore = Number.NEGATIVE_INFINITY;
 
     for (let i = 0; i < k; i++) {
@@ -53,14 +53,7 @@ export function onlineHiringProblem(k, n, scoresList) {
     return n - 1;
 }
 
-const main = () => {
-    let candidates = [3, 2, 6, 4, 5, 1];
-    console.log(hireAssistant(candidates, candidates.length));
-    console.log(randomizedHireAssistant(candidates, candidates.length));
-
-    let k = 3;
-    let scores = [4, 7, 2, 10, 2, 6];
-    console.log(onlineHiringProblem(k, scores.length, scores));
+module.exports = {
+    hireAssistant,
+    onlineHiringProblem,
 };
-
-// main();

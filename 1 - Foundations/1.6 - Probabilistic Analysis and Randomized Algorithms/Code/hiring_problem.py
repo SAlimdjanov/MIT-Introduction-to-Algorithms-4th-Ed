@@ -79,21 +79,3 @@ def online_hiring_problem(k, n, scores):
             return j
 
     return n - 1
-
-
-def main():
-    """
-    Main method
-
-    """
-    candidates = [3, 2, 6, 4, 5, 1]
-    print(hire_assistant(candidates, len(candidates)))
-    print(randomized_hire_assistant(candidates, len(candidates)))
-
-    k = 3
-    scores = [4, 7, 2, 10, 2, 6]
-    print(online_hiring_problem(k, len(scores), scores))
-
-
-if __name__ == "__main__":
-    main()

@@ -3,7 +3,7 @@ heapify.py
 
 """
 
-from heaps import Heap
+from .heaps import Heap
 
 
 class Heapify(Heap):
@@ -27,10 +27,10 @@ class Heapify(Heap):
         left_child = self.left_child(index)
         right_child = self.right_child(index)
 
+        largest = index
+
         if left_child < self.heap_size and self.heap[left_child] > self.heap[index]:
             largest = left_child
-        else:
-            largest = index
 
         if right_child < self.heap_size and self.heap[right_child] > self.heap[largest]:
             largest = right_child
@@ -45,10 +45,10 @@ class Heapify(Heap):
         left_child = self.left_child(index)
         right_child = self.right_child(index)
 
+        smallest = index
+
         if left_child < self.heap_size and self.heap[left_child] < self.heap[index]:
             smallest = left_child
-        else:
-            smallest = index
 
         if (
             right_child < self.heap_size
@@ -62,27 +62,3 @@ class Heapify(Heap):
                 self.heap[index],
             )
             self.min_heapify(smallest)
-
-
-def main():
-    """
-    Main method
-
-    """
-    max_array = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1]
-    heapify_max = Heapify(max_array)
-
-    # Choose index 1, as that is the violating node
-    heapify_max.max_heapify(1)
-    print(heapify_max.heap)
-
-    min_array = [1, 3, 14, 4, 7, 8, 9, 2, 10, 16]
-    heapify_min = Heapify(min_array)
-
-    # Choose the violating node (index 2)
-    heapify_min.min_heapify(2)
-    print(heapify_min.heap)
-
-
-if __name__ == "__main__":
-    main()

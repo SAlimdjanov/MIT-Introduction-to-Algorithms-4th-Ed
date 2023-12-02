@@ -1,14 +1,15 @@
-# VS Code
+### VS Code ###
 .vscode
 
-# Python
+### Python ###
 *__pycache__
 *.pytest_cache
+# Empty __init__.py files mark directories as packages to enable module imports to unit tests
 __init__.py
 
-# Node.js
+### Node.js ###
 node_modules
 package-lock.json
 
-# Misc.
+### Misc. ###
 .DS_Store

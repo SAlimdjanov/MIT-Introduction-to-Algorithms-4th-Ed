@@ -5,7 +5,7 @@ TODO: Implement class MinPriorityQueue
 
 """
 
-from heapify import Heapify
+from .heapify import Heapify
 
 
 class MaxHeapPriorityQueue(Heapify):
@@ -120,62 +120,3 @@ class MaxHeapPriorityQueue(Heapify):
         self.tasks.append(task)
         self.queue[priority] = task
         self.increase_key(self.tasks[-1], k)
-
-
-def print_data(queue_obj, action):
-    """Prints queue object information"""
-    print()
-    print({action})
-    print(f"Heap: {queue_obj.heap}")
-    print(f"Task List: {queue_obj.tasks}")
-    print("Queue:")
-    for i in queue_obj.queue:
-        print(i, queue_obj.queue[i])
-
-
-def main():
-    """Main method"""
-
-    max_heap = [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
-    tasks = [
-        "Task 1",
-        "Task 2",
-        "Task 3",
-        "Task 4",
-        "Task 5",
-        "Task 6",
-        "Task 7",
-        "Task 8",
-        "Task 9",
-        "Task 10",
-    ]
-
-    # Implements dict to mimic mapping of tasks to indices
-    queue = {max_heap[i]: tasks[i] for i in range(len(tasks))}
-
-    max_priority_queue = MaxHeapPriorityQueue(max_heap, tasks, queue)
-    print_data(max_priority_queue, "Original")
-
-    # Max: Return max priority
-    print_data(max_priority_queue, "Max")
-    print(f"Maximum priority value: {max_priority_queue.maximum()}")
-
-    # Extract max: Remove and return maximum priority
-    max_priority = max_priority_queue.extract_max()
-    print_data(max_priority_queue, "Extract Max")
-    print(f"Highest priority ('{max_priority}') task was removed from the queue")
-
-    # Increase Key: Change the priority of 'Professional development' to be 11
-    max_priority_queue.increase_key(tasks[8], 11)
-    print_data(max_priority_queue, "Increase Key")
-
-    # Insert: Insert a new task with priority 17 into the queue
-    new_task = "Urgent Matter!"
-    new_priority = 17
-    max_priority_queue.insert(new_task, new_priority)
-    print_data(max_priority_queue, "Insert")
-    print(f"Task '{new_task}' with priority {new_priority} was inserted into the queue")
-
-
-if __name__ == "__main__":
-    main()

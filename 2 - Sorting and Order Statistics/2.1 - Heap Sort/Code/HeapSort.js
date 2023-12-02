@@ -1,9 +1,9 @@
 /**
- * HeapSort.mjs
+ * HeapSort.js
  *
  */
 
-import BuildHeap from "./BuildHeap.mjs";
+const BuildHeap = require("./BuildHeap");
 
 class HeapSort extends BuildHeap {
     constructor(heap) {
@@ -24,13 +24,4 @@ class HeapSort extends BuildHeap {
     }
 }
 
-const main = () => {
-    let inputArray = [16, 14, 10, 8, 7, 9, 3, 2, 4, 1];
-    let sortHeap = new HeapSort(inputArray);
-    sortHeap.heapSort();
-    console.log(`Sorted Heap: ${sortHeap.heap}`);
-};
-
-// main();
-
-export default HeapSort;
+module.exports = HeapSort;

@@ -1,9 +1,9 @@
 /**
- * Heapify.mjs
+ * Heapify.js
  *
  */
 
-import Heap from "./Heaps.mjs";
+const Heap = require("./Heaps");
 
 class Heapify extends Heap {
     constructor(heap) {
@@ -58,18 +58,4 @@ class Heapify extends Heap {
     }
 }
 
-const main = () => {
-    const maxArray = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1];
-    let heapifyMax = new Heapify(maxArray);
-    heapifyMax.maxHeapify(1);
-    console.log(heapifyMax.heap);
-
-    const minArray = [1, 3, 14, 4, 7, 8, 9, 2, 10, 16];
-    let heapifyMin = new Heapify(minArray);
-    heapifyMin.minHeapify(2);
-    console.log(heapifyMin.heap);
-};
-
-// main();
-
-export default Heapify;
+module.exports = Heapify;

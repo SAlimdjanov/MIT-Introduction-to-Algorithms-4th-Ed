@@ -1,8 +1,9 @@
 /**
- * PriorityQueue.mjs
+ * PriorityQueue.js
+ *
  */
 
-import Heapify from "./Heapify.mjs";
+const Heapify = require("./Heapify");
 
 class MaxHeapPriorityQueue extends Heapify {
     constructor(heap, tasks, queue) {
@@ -75,18 +76,6 @@ class MaxHeapPriorityQueue extends Heapify {
     }
 }
 
-const logData = (queueObj, action) => {
-    console.log();
-    console.log({ action });
-    console.log(`Heap: ${queueObj.heap}`);
-    console.log(`Task List: ${queueObj.tasks}`);
-    console.log("Queue:");
-
-    for (let [key, value] of queueObj.queue.entries()) {
-        console.log(`${key}: ${value}`);
-    }
-};
-
 const constructQueue = (keys, values) => {
     let queue = new Map();
 
@@ -97,48 +86,4 @@ const constructQueue = (keys, values) => {
     return queue;
 };
 
-const main = () => {
-    let maxHeap = [16, 14, 10, 8, 7, 9, 3, 2, 4, 1];
-    let tasks = [
-        "Task1",
-        "Task2",
-        "Task3",
-        "Task4",
-        "Task5",
-        "Task6",
-        "Task7",
-        "Task8",
-        "Task9",
-        "Task10",
-    ];
-
-    let queue = constructQueue(maxHeap, tasks);
-
-    let maxPriorityQueue = new MaxHeapPriorityQueue(maxHeap, tasks, queue);
-    logData(maxPriorityQueue, "Original");
-
-    logData(maxPriorityQueue, "Max");
-    console.log(`Maximum priority value: ${maxPriorityQueue.maximum()}`);
-
-    let extractedMax = maxPriorityQueue.extractMax();
-    logData(maxPriorityQueue, "Extract Max");
-    console.log(
-        `Highest priority ('${extractedMax}') task was removed from the queue`
-    );
-
-    maxPriorityQueue.increaseKey(tasks[8], 11);
-    logData(maxPriorityQueue, "Increase Key");
-    console.log(`Task ${tasks[8]} of was increased to priority ${11}`);
-
-    let newTask = "Urgent Matter!";
-    let newPriority = 17;
-    maxPriorityQueue.insert(newTask, newPriority);
-    logData(maxPriorityQueue, "Insert");
-    console.log(
-        `Task '${newTask}' of priority '${newPriority}' was added to the queue`
-    );
-};
-
-main();
-
-export default MaxHeapPriorityQueue;
+module.exports = { constructQueue, MaxHeapPriorityQueue };

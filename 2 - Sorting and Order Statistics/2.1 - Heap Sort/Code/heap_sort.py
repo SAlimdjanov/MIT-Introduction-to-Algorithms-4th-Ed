@@ -3,7 +3,7 @@ heap_sort.py
 
 """
 
-from build_heap import BuildHeap
+from .build_heap import BuildHeap
 
 
 class HeapSort(BuildHeap):
@@ -25,19 +25,3 @@ class HeapSort(BuildHeap):
             self.heap[0], self.heap[i] = self.heap[i], self.heap[0]
             self.heap_size -= 1
             self.max_heapify(0)
-
-
-def main():
-    """
-    Main method
-
-    """
-    input_array = [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]
-    heap_sort = HeapSort(input_array)
-
-    heap_sort.heap_sort()
-    print(heap_sort.heap)
-
-
-if __name__ == "__main__":
-    main()

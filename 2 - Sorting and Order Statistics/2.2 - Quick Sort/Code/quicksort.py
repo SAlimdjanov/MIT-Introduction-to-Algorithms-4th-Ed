@@ -45,22 +45,3 @@ class Quicksort:
             q = self.partition(p, r)
             self.quicksort(p, q - 1)
             self.quicksort(q + 1, r)
-
-
-def main():
-    """
-    Main method
-
-    """
-    array = [2, 8, 7, 1, 3, 5, 6, 4]
-    p = 0
-    r = len(array) - 1
-
-    quicksort = Quicksort(array)
-    quicksort.quicksort(p, r)
-
-    print(quicksort.array)
-
-
-if __name__ == "__main__":
-    main()

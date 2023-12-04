@@ -6,15 +6,16 @@ This repository contains notes, implementation, and unit tests pertaining to var
 
 ### 1 - Introduction
 
-1. Insertion Sort
-2. Analyzing Algorithms
-3. Designing Algorithms
-4. Characterizing Running Times
-5. Divide and Conquer
-6. Probabilistic Analysis
+1.  Insertion Sort
+2.  Analyzing Algorithms
+3.  Designing Algorithms
+4.  Characterizing Running Times
+5.  Divide and Conquer
+6.  Probabilistic Analysis
 
 ### 2 - Sorting and Order Statistics
 
-1. Heap Sort
-2. Quick Sort
-3. Sorting in Linear Time
+1.  Heap Sort
+2.  Quick Sort
+3.  Sorting in Linear Time
+4.  Medians and Order Statistics

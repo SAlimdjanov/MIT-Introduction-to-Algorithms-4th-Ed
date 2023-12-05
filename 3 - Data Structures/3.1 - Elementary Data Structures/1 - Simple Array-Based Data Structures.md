@@ -22,10 +22,11 @@ Row-major order would be stored in a 1-D array as $[1, 2, 3, 4, 5, 6]$ or in a 2
 $$
 C=\left(
 \begin{array}{c|c}
-\begin{matrix} 1 & 2 \\ 5 & 6\end{matrix} &
-\begin{matrix} 3 & 4 \\ 7 & 8\end{matrix} \\ \hline
-\begin{matrix} 9 & 10 \\ 13 & 14\end{matrix} &
-\begin{matrix} 11 & 12 \\ 15 & 16\end{matrix}
+\begin{matrix} 1 & 2 \\ 5 & 6 \end{matrix} &
+\begin{matrix} 3 & 4 \\ 7 & 8 \end{matrix} \\ 
+\hline
+\begin{matrix} 9 & 10 \\ 13 & 14 \end{matrix} &
+\begin{matrix} 11 & 12 \\ 15 & 16 \end{matrix}
 \end{array}\right)
 $$
 

@@ -19,3 +19,7 @@ This repository contains notes, implementation, and unit tests pertaining to var
 2.  Quick Sort
 3.  Sorting in Linear Time
 4.  Medians and Order Statistics
+
+### 3 - Data Structures
+
+1.  Elementary Data Structures (Stacks, Queues, and Linked Lists)

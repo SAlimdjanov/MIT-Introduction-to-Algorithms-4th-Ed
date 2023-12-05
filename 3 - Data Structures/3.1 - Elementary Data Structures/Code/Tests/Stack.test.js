@@ -10,7 +10,7 @@ let testStack = new Stack(4);
 test("Stack underflow detected properly", () => {
     expect(() => {
         testStack.pop();
-    }).toThrow(new EvalError("Stack underflow"));
+    }).toThrow(new RangeError("Stack underflow"));
 });
 
 test("Empty stack detected properly", () => {
@@ -31,7 +31,7 @@ test("Stack overflow occurs when you push too many elements", () => {
 
     expect(() => {
         testStack.push(77);
-    }).toThrow(new EvalError("Stack overflow"));
+    }).toThrow(new RangeError("Stack overflow"));
 });
 
 test("Operation pop works properly", () => {

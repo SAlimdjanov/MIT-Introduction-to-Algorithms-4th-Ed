@@ -1,13 +1,11 @@
 """
 stacks.py
 
-Implements stacks in constant time and space complexity
-
 """
 
 
 class Stack:
-    """Implements stack operations on an array"""
+    """Implements the stack data structure in constant time and space complexity"""
 
     def __init__(self, size):
         """Initializes empty stack of a specific size
@@ -34,7 +32,7 @@ class Stack:
             x (int): Value to be placed in the stack
         """
         if self.top == self.size:
-            raise ValueError("Stack overflow")
+            raise IndexError("Stack overflow")
 
         self.top += 1
         self.stack[self.top - 1] = x
@@ -46,7 +44,7 @@ class Stack:
             int: Removed element
         """
         if self.stack_empty():
-            raise ValueError("Stack underflow")
+            raise IndexError("Stack underflow")
 
         self.top -= 1
         value = self.stack[self.top]

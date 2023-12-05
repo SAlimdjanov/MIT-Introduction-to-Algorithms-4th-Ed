@@ -14,7 +14,7 @@ test_stack = Stack(4)
 
 def test_underflow():
     """Exception is raised when pop is attempted on an empty stack"""
-    with raises(ValueError):
+    with raises(IndexError):
         test_stack.pop()
 
 
@@ -41,7 +41,7 @@ def test_overflow():
     """Stack overflow occurs when 2 elements are pushed"""
     test_stack.push(27)
 
-    with raises(ValueError):
+    with raises(IndexError):
         test_stack.push(64)
 
 

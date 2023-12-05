@@ -20,7 +20,7 @@ class Stack {
 
     push(x) {
         if (this.top == this.size) {
-            throw new EvalError("Stack overflow");
+            throw new RangeError("Stack overflow");
         }
 
         this.top += 1;
@@ -29,7 +29,7 @@ class Stack {
 
     pop() {
         if (this.stackEmpty()) {
-            throw new EvalError("Stack underflow");
+            throw new RangeError("Stack underflow");
         }
 
         this.top -= 1;

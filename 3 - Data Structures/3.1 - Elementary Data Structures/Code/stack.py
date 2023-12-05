@@ -1,6 +1,8 @@
 """
 stacks.py
 
+Implements stacks in constant time and space complexity
+
 """
 
 
@@ -23,10 +25,7 @@ class Stack:
         Returns:
             bool: Is the stack empty?
         """
-        if self.top == 0:
-            return True
-
-        return False
+        return self.top == 0
 
     def push(self, x):
         """Pushes an element into the stack

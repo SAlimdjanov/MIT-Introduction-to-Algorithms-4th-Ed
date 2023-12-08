@@ -58,26 +58,3 @@ class Queue:
         self.tail -= 1
 
         return x
-
-
-# my_queue = Queue(5)
-
-# for i in range(my_queue.size):
-#     my_queue.enqueue(i)
-
-# print(my_queue.queue)
-
-# print("dequeued", my_queue.dequeue())
-# print(my_queue.queue)
-
-# my_queue.enqueue(11)
-# print(my_queue.queue)
-
-# print("dequeued", my_queue.dequeue())
-# print(my_queue.queue)
-
-# my_queue.enqueue(12)
-# print(my_queue.queue)
-
-# my_queue.enqueue(12)
-# print(my_queue.queue)

@@ -6,7 +6,7 @@ doubly_linked_list.py
 
 class DoublyLinkedList:
     """Doubly Linked List without sentinels. This extends the baseline functionality presented in
-    the book"""
+    the book. Computed in O(n) space."""
 
     class ListObject:
         """Initializes a linked list object of key value 'key (int)'"""
@@ -22,6 +22,8 @@ class DoublyLinkedList:
 
     def ll_append(self, k):
         """Append an element to the back of the list
+
+        Time complexity: O(n)
 
         Args:
             k (int): Value of the key of the new element
@@ -46,6 +48,8 @@ class DoublyLinkedList:
     def ll_prepend(self, k):
         """Insert a ListObject to the front of the linked list
 
+        Time complexity: O(1)
+
         Args:
             k (int): Key of the object to be added to the list
         """
@@ -64,6 +68,8 @@ class DoublyLinkedList:
 
     def ll_insert_after(self, k, k_new):
         """Insert an element with key 'k_new' into the list after an element of key 'k'
+
+        Time complexity: O(n)
 
         Args:
             k (int): Key of the object that you want to insert an object after
@@ -89,6 +95,8 @@ class DoublyLinkedList:
     def ll_insert_before(self, k, k_new):
         """Insert an element with key 'k_new' into the list before an element of key 'k'
 
+        Time complexity: O(n)
+
         Args:
             k (int): Key of the object that you want to insert an object before
             k_new (int): Key value of the new object
@@ -113,6 +121,8 @@ class DoublyLinkedList:
     def ll_search(self, k):
         """Search for an object in the list. Throws a KeyError if not found.
 
+        Time complexity: O(n)
+
         Args:
             k (int): Key associated with the object
 
@@ -131,6 +141,8 @@ class DoublyLinkedList:
 
     def ll_delete(self, k):
         """Deletes an element from the list. Throws a KeyError if not found.
+
+        Time complexity: O(n)
 
         Args:
             k (int): Key of the object to delete
